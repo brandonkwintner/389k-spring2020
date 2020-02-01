@@ -3,10 +3,62 @@
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
         <style>
-            
+            #green {
+                color: green;
+                font-size: 124px;
+                font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+            }
+            h3 {
+                color: aqua;
+            }
+            .pink {
+                color: pink;
+            }
+
+            li {
+                display: inline;
+                padding: 10px 10px 10px 10px;
+            }
+            @media (max-width: 1000px) {
+                #green {
+                    font-size: 24px;
+                }
+            }
         </style>
     </head>
     <body>
-        
+        <ul>
+            <li>
+                <a href="https://www.google.com/?client=safari"> Home </a>
+            </li>
+            <li>
+                <a href="https://www.google.com/?client=safari"> About Me </a>
+            </li>
+            <li>
+                <a href="https://www.google.com/?client=safari"> FAQ </a>
+            </li>
+        </ul>
+
+        <ol>
+            <li>One!</li>
+            <li>Two!</li>
+        </ol>
+
+        <h1 id="green">Hello World.</h1>
+        <h1>Another h1 that shouldn't be green</h1>
+        <h3>Medium Sized Text.</h3>
+        <h6 class="pink">Smaller Text.</h6>
+
+        <p>This <b>is</b> a <i>paragraph.</i> This is a 
+            <a href="https://d17fnq9dkz9hgj.cloudfront.net/breed-uploads/2018/09/dog-landing-hero-lg.jpg?bust=1536935129&width=1080">link</a>.
+        </p>
+        <img src="https://images2.minutemediacdn.com/image/upload/c_crop,h_843,w_1500,x_0,y_10/f_auto,q_auto,w_1100/v1555172614/shape/mentalfloss/iStock-177369626_1.jpg">
+
+        <form>
+            <input type="text" name="firstname">
+            <button type="submit" value="button">
+                Click Me!
+            </button>
+        </form>
     </body>
 </html>
