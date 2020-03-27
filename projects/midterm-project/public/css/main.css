@@ -1,0 +1,66 @@
+/* GLOBAL */ 
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: lightgrey;
+}
+
+/* MAIN */
+
+.nav a {
+    font-size: x-large;
+    padding: 10px;
+    background-color: darkgrey;
+    font-weight: bold;
+    color: black;
+}
+
+/* Search bar */
+
+input#searchbar{
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Display message when there are no powerlifters to be displayed. */
+#no_powerlifters {
+    display: none;
+}
+
+/* List of Powerlifters */
+
+.info {
+    padding: 20px;
+    width: 60%;
+    background-color: darkgray;
+    color: black;
+}
+
+/* Form */
+
+.input-field {
+    padding: 10px 0;
+}
+
+label {
+    display: block;
+}
+
+.input-field input {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+button {
+	border: none;
+	padding: 10px;
+	background-color: red;
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+}
+

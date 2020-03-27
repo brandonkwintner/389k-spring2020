@@ -1,0 +1,66 @@
+<!-- All Nav Bar links -->
+{{#if header}}
+<h2>{{header}}</h2>
+
+<!-- Home Page -->
+{{else}}
+
+<div>
+    <input id="searchbar" type="text" placeholder="Filter Powerlifters..."> 
+    <script>
+        // Names of every Powerlifter.
+        var names = "{{names}}".split(",")
+        
+        $('#searchbar').on('input',function(e){
+            let input = document.getElementById('searchbar').value.toLowerCase()
+            var filtered_names = []
+
+            // Gets filtered names.
+            for(name of names) { 
+                let l_name = name.toLowerCase() 
+                if (l_name.includes(input)) { 
+                    filtered_names.push(name)
+                } 
+            }
+
+            // Hides and shows appropriate elements.
+            for(name of names) {
+                let curr = '#' + name
+                filtered_names.includes(name) ? $(curr).show() : $(curr).hide()
+            }
+
+            // Determine if no names are being shown.
+            filtered_names.length == 0 ? $('#no_powerlifters').show() : $('#no_powerlifters').hide()
+        });
+        
+    </script>
+</div>
+
+<h2>All Powerlifters:</h2> 
+<div id="no_powerlifters">
+    <h2>There are no Powerlifters with that name! </h2>
+</div>
+{{/if}}
+
+{{#each data}}
+<div id="{{this.name}}">
+    <article>
+        <h2 class="name">{{this.name}}</h2>
+        <hr>
+        <div class="info">
+            <p>Weight Class: {{this.weight_class}}</p>
+            <p>Squat: {{this.squat}} lbs</p>
+            <p>Bench: {{this.bench}} lbs</p>
+            <p>Deadlift: {{this.deadlift}} lbs</p>
+            <p>Favorite Brands: {{this.favorite_brands}}</p>
+        </div>
+    </article>
+</div>
+{{else}}
+
+<!-- No data to display -->
+<article>
+    <h1>There are no logged Powerlifters yet... (Sad!)</h1>
+    <a href="/addPowerlifter">Add a Powerlifter!</a>
+</article>
+{{/each}}
