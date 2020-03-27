@@ -213,6 +213,6 @@ app.post('/api/addPowerlifter', function(req,res){
 
 /* --- END API's --- */
 
-app.listen(PORT, function() {
+app.listen(process.env.PORT || PORT, function() {
     console.log('Listening on port:', PORT);
 });
